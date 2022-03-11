@@ -1,0 +1,19 @@
+div {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: lightgray;
+}   
+
+h1 {
+    color: #1ebbd7;
+    font-size: 4em;
+    line-height: 1em;
+}
+
+h2 {
+    color: #27d8a9;
+    font-size: 2em;
+}

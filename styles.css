@@ -29,8 +29,9 @@ h2 {
 
 p {
     color: white;
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto", "Comic Sans MS";
     font-size: 2em;
+    font-style: italic;
     margin-top: 50px;
 }
 

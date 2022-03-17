@@ -1,9 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:&display=swap');
 
-header {
-    display: flex;
-    background-color: #2b2b2b;
-    color: white;;
+html {
+    scroll-behavior: smooth;
+}
+
+.nav{
+    list-style: none;
+    margin:0;
+    padding:0;
+    text-align:center;
+    background-color: #2B2B2B;
+}
+.nav li{
+    display:inline;
+}
+.nav a{
+    display:inline-block;
+    padding:10px;
+}
+
+.navlink {
+    text-decoration: none;
+    font-family: "Rubik";
+    font-size: 1.2em;
+    color: white;
 }
 
 #top-section {
@@ -15,19 +35,19 @@ header {
 } 
 
 #middle-section {
-    height: 450px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.button-row {
+#button-row {
     size: 4em;
     display: flex;
     justify-content: space-evenly;
-    flex-direction: row;
     padding-bottom: 100px;
     align-items: center;
+    margin-left: 25%;
+    margin-right: 25%;
 }
 
 #button {
@@ -40,12 +60,13 @@ header {
 }   
 
 #button:hover {
-    background-color: #2b2b2b;
+    background-color: #3887eb;
+    border: none;
     color: white;
 }
 
 #lower-section {
-    height: 600px;
+    height: 1000px;
     display: flex;
     justify-content: center;
     background-color: #2B2B2B;
@@ -55,7 +76,7 @@ header {
 h1 {
     color: black;
     font-family: "Rubik", sans-serif;
-    font-size: 4em;
+    font-size: 5em;
     height: 50px;
 }
 

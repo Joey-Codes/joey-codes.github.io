@@ -31,9 +31,9 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background: linear-gradient(45deg, #23d56d, #23a6d5, #7128d1, #cc1f2a);
     background-size: 400% 400%;
-	animation: gradient 10s ease infinite;
+	animation: gradient 7s ease infinite;
 }
 
 @keyframes gradient {
@@ -66,8 +66,8 @@ html {
 
 #button {
     background-color: white;
-    color: #3887eb;
-    border: 3px solid #3887eb;
+    color: #072fb3;
+    border: 3px solid #072fb3;
     width: 10em;
     height: 4em;
     font-family: "Rubik";
@@ -76,7 +76,7 @@ html {
 
 
 #button:hover {
-    background-color: #3887eb;
+    background-color: #072fb3;
     border: none;
     color: white;
 }
@@ -119,3 +119,6 @@ p {
     margin-top: 50px;
 }
 
+footer {
+    font-family: "Rubik";
+}

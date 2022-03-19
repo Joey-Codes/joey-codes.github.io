@@ -72,8 +72,8 @@ a:hover {
     justify-content: space-evenly;
     padding-bottom: 100px;
     align-items: center;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 20%;
+    margin-right: 20%;
 }
 
 #button {
@@ -136,6 +136,7 @@ h4 {
 h5 {
     font-family: "Rubik", sans-serif;
     font-size: 3.7em;
+    margin-top: 2%;
 }
 
 p {
@@ -148,4 +149,29 @@ p {
 
 footer {
     font-family: "Rubik";
+}
+
+@media only screen and (max-width:500px) {
+    h2 {
+        border-bottom: none;
+    }
+    h3, #button-row {
+        margin-left: 0%;
+        margin-right: 0%;
+        font-size: 22px;
+    }
+}
+
+@media only screen and (max-width:900px) {
+    h2 {
+        border-bottom: none;
+    }
+    h3 {
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+    #button-row {
+        margin-left: 0%;
+        margin-right: 0%;
+    }
 }

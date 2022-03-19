@@ -83,7 +83,7 @@ a:hover {
     width: 9em;
     height: 3.9em;
     font-family: "Rubik";
-    font-size: 22px;
+    font-size: 20px;
 }   
 
 #button:hover {
@@ -151,24 +151,46 @@ footer {
     font-family: "Rubik";
 }
 
-@media only screen and (max-width:500px) {
+@media screen and (max-width:500px) {
+    .navlink {
+        font-size: 20px;
+    }
+    #top-section {
+        margin-top: 26%;
+    }
+    h1 {
+        font-size: 3em;
+    }
     h2 {
         border-bottom: none;
+        text-align: center;
     }
     h3, #button-row {
         margin-left: 0%;
         margin-right: 0%;
         font-size: 22px;
     }
+    #button-row {
+        flex-direction: column;
+        height: 400px;
+        padding-top: 0px;
+    }
+    }
+    p {
+        text-align: center;
+    }
 }
 
-@media only screen and (max-width:900px) {
+@media screen and (max-width:930px) {
+    .navlink {
+        font-size: 1.1em;
+    }
     h2 {
         border-bottom: none;
     }
     h3 {
-        margin-left: 15%;
-        margin-right: 15%;
+        margin-left: 10%;
+        margin-right: 10%;
     }
     #button-row {
         margin-left: 0%;

@@ -168,21 +168,6 @@ footer {
         text-align: center;
         font-size: 3em;
         margin-bottom: 0;
-        position: relative;
-    }
-    h2::after {
-	    position: absolute;
-	    content: "";
-	    width: 0%;
-	    height: 4px;
-	    background: linear-gradient(to right, #23d56d, #23a6d5);
-	    left: 50%;
-	    bottom: -10px;
-	    transition: all 0.5s ease-in-out;
-    }
-    .underline:hover h2::after {
-        width: 100%;
-        left: 0;
     }
     h3, #button-row {
         margin-left: 0%;
@@ -202,7 +187,8 @@ footer {
     }
 }
 
-@media only screen and (max-width:930px) and (min-width:600px) {
+@media only screen and (max-width:930px) and (min-width:600px) 
+       and (-webkit-min-device-pixel-ratio: 1) {
     .navlink {
         font-size: 1.4em;
     }
@@ -241,8 +227,8 @@ footer {
 	    transition: all 0.5s ease-in-out;
     }
     .underline:hover h2::after {
-    width: 100%;
-    left: 0;
+        width: 100%;
+        left: 0;
     }
 }
 

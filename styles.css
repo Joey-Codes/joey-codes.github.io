@@ -188,6 +188,7 @@ footer {
 }
 
 @media only screen and (max-width:930px) and (min-width:600px) 
+       and (orientation: landscape)
        and (-webkit-min-device-pixel-ratio: 1) {
     .navlink {
         font-size: 1.4em;

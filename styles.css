@@ -131,7 +131,7 @@ h4 {
 h5 {
     font-family: "Rubik", sans-serif;
     font-size: 3.7em;
-    margin-top: 2%;
+    margin-top: 3%;
 }
 
 p {
@@ -168,11 +168,29 @@ footer {
         text-align: center;
         font-size: 3em;
         margin-bottom: 0;
+        position: relative;
+    }
+    h2::after {
+	    position: absolute;
+	    content: "";
+	    width: 0%;
+	    height: 4px;
+	    background: linear-gradient(to right, #23d56d, #23a6d5);
+	    left: 50%;
+	    bottom: -10px;
+	    transition: all 0.5s ease-in-out;
+    }
+    .underline:hover h2::after {
+        width: 100%;
+        left: 0;
     }
     h3, #button-row {
         margin-left: 0%;
         margin-right: 0%;
         font-size: 19px;
+    }
+    h5 {
+        margin-top: 10%;
     }
     #button-row {
         flex-direction: column;
@@ -184,7 +202,7 @@ footer {
     }
 }
 
-@media screen and (max-width:930px) {
+@media only screen and (max-width:930px) and (min-width:600px) {
     .navlink {
         font-size: 1.4em;
     }
@@ -198,6 +216,9 @@ footer {
         margin-left: 10%;
         margin-right: 10%;
     }
+    h5 {
+        margin-top: 6.5%;
+    }
     #button-row {
         margin-left: 0%;
         margin-right: 0%;
@@ -206,10 +227,23 @@ footer {
 
 @media screen and (min-width: 1000px) {
     h2 {
-    border-bottom: 4px solid;
-    border-image: linear-gradient(to right, #23d56d, #23a6d5);
-    border-image-slice: 1;
-    border-width: 40%;
-    margin-bottom: 5px;
+        position: relative;
+        margin-bottom: 2%;
+    }
+    h2::after {
+	    position: absolute;
+	    content: "";
+	    width: 0%;
+	    height: 6px;
+	    background: linear-gradient(to right, #23d56d, #23a6d5);
+	    left: 50%;
+	    bottom: -10px;
+	    transition: all 0.5s ease-in-out;
+    }
+    .underline:hover h2::after {
+    width: 100%;
+    left: 0;
     }
 }
+
+

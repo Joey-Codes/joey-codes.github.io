@@ -67,7 +67,7 @@ a:hover {
     padding-bottom: 40px;
 }
 
-.box {
+#box {
     box-sizing: border-box;
     box-shadow:
         -10px -10px 30px #fff,
@@ -198,7 +198,7 @@ footer {
     }
 }
 
-@media screen and (max-width:930px) and (min-width:600px) {
+@media screen and (max-width:1370px) and (min-width:600px) {
     .navlink {
         font-size: 1.4em;
     }
@@ -221,7 +221,7 @@ footer {
     }
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1400px) {
     h2 {
         margin-bottom: 2%;
         border-bottom: 5px solid;

@@ -43,20 +43,8 @@ a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: linear-gradient(45deg, #23d56d, #23a6d5, #7128d1, #23a6d5);
-    background-size: 400% 400%;
-}
-
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+    background: linear-gradient(45deg, #23d56d, #23a6d5, #7128d1, #23a6d5, #23d56d);
+    background-size: 300% 300%;
 }
 
 #middle-section {
@@ -157,6 +145,9 @@ footer {
     font-family: "Rubik";
 }
 
+/* Device-specific styling ///////////////////////////////*/
+
+/* MOBILE */
 @media screen and (max-width:500px) {
     .nav a {
         padding-left: 6px;
@@ -164,6 +155,7 @@ footer {
         font-size: 16px;
     }
     #top-section {
+        padding-top: 1.2em;
         background: linear-gradient(45deg, #23d56d, #23a6d5, #7128d1);
     }
     img {
@@ -198,17 +190,20 @@ footer {
     }
 }
 
+/* TABLET */
 @media screen and (max-width:1370px) and (min-width:600px) {
     .navlink {
         font-size: 1.4em;
     }
     #top-section {
+        padding-top: 1.1em;
         background: linear-gradient(45deg, #23d56d, #23a6d5, #7128d1);
     }
     h2 {
         margin-bottom: 0;
     }
     h3 {
+        font-size: 1.3em;
         margin-left: 10%;
         margin-right: 10%;
     }
@@ -221,7 +216,22 @@ footer {
     }
 }
 
+/* LAPTOP+ */
 @media screen and (min-width: 1400px) {
+    #top-section {
+        animation: gradient 13s ease infinite;
+    }
+    @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
     h2 {
         margin-bottom: 2%;
         border-bottom: 5px solid;

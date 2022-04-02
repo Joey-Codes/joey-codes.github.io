@@ -1,8 +1,93 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
-html {
-    scroll-behavior: smooth;
+html {scroll-behavior: smooth;}
+
+.welcome .splash {
+    height: 0px;
+    padding: 0px;
+    border: 130em solid #23d56d;
+    position: fixed;
+    left: 50%;
+    top: 100%;
+    display: flex;
+    justify-content: center;
+    box-sizing: initial;
+    overflow: hidden;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: puff 0.5s 1.8s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards, borderRadius 0.2s 2.3s linear forwards, behind 0s 3s forwards;
+}
+  
+.welcome #welcome {
+    background: white;
+    width: 62px;
+    height: 62px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    overflow: hidden;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    animation: init 0s 0s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards, moveDown 1s 0.8s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards, moveUp 1s 1.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards, materia 0.5s 2.7s cubic-bezier(0.86, 0, 0.07, 1) forwards, hide 2s 2.9s ease forwards;
+}
+     
+/* moveIn */ 
+.welcome header,
+.welcome a.btn {opacity: 0; animation: moveIn 2s 3.1s ease forwards;}
+
+@keyframes behind {
+    from {z-index: 1;}
+    to {z-index: -1; visibility: hidden;}
+}
+
+@keyframes init {
+    0% {width: 0px; height: 0px;}
+    100% {width: 62px; height: 62px; margin-top: 0px; opacity: 1;}
+}
+  
+@keyframes puff {
+    0% {top: 100%; height: 0px; padding: 0px;}
+    100% {top: 50%; height: 100%; padding: 0px 100%;}
+}
+  
+@keyframes borderRadius {
+    0% {border-radius: 50%;}
+    100% {border-radius: 0px;}
+}
+
+@keyframes behind {
+    0% {z-index: 1;}
+    100% {z-index: -1;}
+}
+  
+@keyframes moveDown {
+    0% {top: 50%;}
+    50% {top: 40%;}
+    100% {top: 100%;}
+}
+  
+@keyframes moveUp {
+    0% {background: #311b92; top: 100%;}
+    50% {top: 40%;}
+    100% {top: 50%; background: #039be5;}
+}
+  
+@keyframes materia {
+    0% {background: #039be5;}
+    50% {background: #039be5; top: 26px;}
+    100% {background: #311b92; width: 100%; height: 64px; border-radius: 0px; top: 26px;}
+}
+  
+@keyframes moveIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+  
+@keyframes hide {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
 }
 
 .nav{
@@ -132,6 +217,15 @@ h5 {
     font-size: 3.7em;
     margin-top: 3%;
 }
+h6 {
+    font-family: "Rubik", sans-serif;
+    font-size: 7.3em;
+    color: white;
+    position: fixed;
+    transform: translate(129%, 80%);
+    z-index: 1;
+    animation: behind 0s 1.8s forwards;
+}
 
 p {
     color: white;
@@ -180,6 +274,9 @@ footer {
     h5 {
         margin-top: 10%;
     }
+    h6 {
+        visibility: hidden;
+    }
     #button-row {
         flex-direction: column;
         height: 400px;
@@ -210,6 +307,9 @@ footer {
     h5 {
         margin-top: 6.5%;
     }
+    h6 {
+        visibility: hidden;
+    }
     #button-row {
         padding-left: 0%;
         padding-right: 0%;
@@ -222,15 +322,9 @@ footer {
         animation: gradient 13s ease infinite;
     }
     @keyframes gradient {
-        0% {
-            background-position: 0% 50%;
-        }
-        50% {
-            background-position: 100% 50%;
-        }
-        100% {
-            background-position: 0% 50%;
-        }
+        0% {background-position: 0% 50%;}
+        50% {background-position: 100% 50%;}
+        100% {background-position: 0% 50%;}
     }
     h2 {
         margin-bottom: 2%;
@@ -241,5 +335,3 @@ footer {
         margin-bottom: 5px;
     }
 }
-
-

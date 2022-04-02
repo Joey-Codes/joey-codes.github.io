@@ -1,3 +1,3 @@
 # joey-codes.github.io
 
-### My personal website
+My personal website

@@ -195,6 +195,10 @@ h1 {
 h2 {
     font-family: "Rubik", sans-serif;
     font-size: 3.7em;
+    border-image: linear-gradient(to right, #23d56d, #23a6d5);
+    border-image-slice: 1;
+    border-width: 40%;
+    border-bottom: 5px solid;
 }
 
 h3 {
@@ -237,117 +241,73 @@ p {
     margin-top: 50px;
 }
 
-footer {
-    font-family: "Rubik";
-}
+footer {font-family: "Rubik";}
 
 /* Device-specific styling ///////////////////////////////*/
 
 /* MOBILE */
 @media screen and (max-width:500px) {
-    .nav a {
-        padding-left: 6px;
-        padding-right: 6px;
-        font-size: 16px;
-    }
-    #top-section {
-        padding-top: 1.2em;
-        background: linear-gradient(45deg, #23d56d, #23a6d5, #7128d1);
-    }
-    img {
-        width: 258px;
-        height: 200px;
-        padding-top: 60px;
-    }
-    h1 {
-        font-size: 4em;
-        text-align: center;
-    }
-    h2 {
-        text-align: center;
-        font-size: 3em;
-        margin-bottom: 0;
-    }
-    h3, #button-row {
-        margin-left: 0%;
-        margin-right: 0%;
-        font-size: 19px;
-    }
-    h5 {
-        margin-top: 10%;
-    }
-    h6 {
-        visibility: hidden;
-    }
-    #button-row {
-        flex-direction: column;
-        height: 400px;
-        padding-top: 0px;
-    }
-    p {
-        text-align: center;
-    }
+    .nav {height: 3.3em;}
+
+    .nav a {padding-top: 18px; padding-left: 6px; padding-right: 6px; font-size: 17px;}
+    
+    #top-section {padding-top: 1em; height: 33em; background: linear-gradient(45deg, #23d56d, #23a6d5, #7128d1);}
+    
+    img {width: 258px; height: 200px; padding-top: 60px;}
+
+    h1 {font-size: 4em; text-align: center;}
+    
+    h2 {text-align: center; font-size: 2.7em; margin-bottom: 0; border-bottom: 4px solid;}
+    
+    h3 {margin-left: 5%; margin-right: 5%; font-size: 19px;}
+
+    h5 {margin-top: 10%; font-size: 3em;}
+
+    h6 {visibility: hidden;}
+
+    #middle-section {padding-bottom: 5px; padding-top: 12px;}
+
+    #button-row {flex-direction: column; height: 400px; padding-top: 0px; padding-bottom: 15px;}
+    
+    #button {width: 8em; height: 4em; font-size: 18px;}
+    
+    p {text-align: center; font-size: 1.5em;}
 }
 
 /* TABLET */
 @media screen and (max-width:1370px) and (min-width:600px) {
-    .navlink {
-        font-size: 1.4em;
-    }
-    #top-section {
-        padding-top: 1.1em;
-        background: linear-gradient(45deg, #23d56d, #23a6d5, #7128d1);
-    }
-    h2 {
-        margin-bottom: 0;
-    }
-    h3 {
-        font-size: 1.3em;
-        margin-left: 10%;
-        margin-right: 10%;
-    }
-    h5 {
-        margin-top: 6.5%;
-    }
-    h6 {
-        visibility: hidden;
-    }
-    #button-row {
-        padding-left: 0%;
-        padding-right: 0%;
-    }
+    .navlink {font-size: 1.4em;}
+    
+    #top-section {padding-top: 1.1em; background: linear-gradient(45deg, #23d56d, #23a6d5, #7128d1);}
+
+    h2 {margin-bottom: 0;}
+    
+    h3 {font-size: 1.3em; margin-left: 10%; margin-right: 10%;}
+
+    h5 {margin-top: 6.5%;}
+    
+    h6 {visibility: hidden;}
+
+    #button-row {padding-left: 0%; padding-right: 0%;}
 }
 
 /* LAPTOP+ */
 @media screen and (min-width: 1400px) {
-    #top-section {
-        animation: gradient 13s ease infinite;
-    }
-    @keyframes gradient {
-        0% {background-position: 0% 50%;}
-        50% {background-position: 100% 50%;}
-        100% {background-position: 0% 50%;}
-    }
-    h2 {
-        margin-bottom: 2%;
-        border-bottom: 5px solid;
-        border-image: linear-gradient(to right, #23d56d, #23a6d5);
-        border-image-slice: 1;
-        border-width: 40%;
-        margin-bottom: 5px;
+    #top-section {animation: gradient 13s ease infinite;}
+
+    h2 {margin-bottom: 2%; margin-bottom: 5px;}
+
+@keyframes gradient {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
     }
 }
 
 @media screen and (min-width: 2000px) {
-    h6 {
-        top: 44.5%;
-        left: 38.5%;
-    }
+    h6 {top: 44.5%; left: 38.5%;}
 }
 
 @media screen and (min-width: 3000px) {
-    h6 {
-        top: 46%;
-        left: 40%;
-    }
+    h6 {top: 46%; left: 40%;}
 }

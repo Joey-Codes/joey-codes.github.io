@@ -17,46 +17,65 @@
     <span id="welcome" class="z-depth-4"></span>
     <header id="top">
         <ul class="nav" align="center">
-            <li><a href="#top" class="navlink">HOME</a></li>
+            <li><a href="#top" class="navlink">TOP</a></li>
             <li><a href="#middle-section" class="navlink">ABOUT</a></li>
-            <li><a href="#link-space" class="navlink">LINKS</a></li>
             <li><a href="#lower-section" class="navlink">PROJECTS</a></li>
-            <li><a class="navlink">RESUME</a></li>
+            <li><a href="https://github.com/joey-codes" class="navlink">GITHUB</a></li>
+            <li><a href="https://us-central1-original-bot-384400.cloudfunctions.net/resume-function" class="navlink">RESUME</a></li>
         </ul>
     </header>
     <div id="top-section">
-        <h1>HELLO I'M JOEY</h1>
-        <img src="images/laptop.png" alt="laptop" width="400" height="310" /> 
-        <p><b>currently a computer science student</b></p>
-    </div>
+        <h1>HELLO, I'M JOEY</h1>
+        <p><b>Use the WASD keys to move</b></p>
+    </div>    
     <div id="middle-section">
-        <h2 class="wave">ABOUT ME</h2>
-        <h3>Hi, I'm currently in college majoring in computer science.
-            This site will be used to showcase personal projects of mine.
-            * Site is still under construction... *
-        </h3>
-        <h2 class="wave">EXPERIENCE</h2>
-        <h3>This is an example paragraph with example sentences.
-            This is an example paragraph with example sentences.
-            This is an example paragraph with example sentences.
-        </h3>
-        <h4 id="link-space"></h4>
-        <h2 class="wave">LINKS & INFO</h2>
-    </div>
-    <div id="button-row">
-        <button id="button" onclick="location.href='https://github.com/Joey-Codes?tab=repositories'" type="button">
-            GITHUB</button>
-        <button id="button">RESUME</button>
-        <button id="button" onclick="location.href='https://www.youtube.com/watch?v=a3Z7zEc7AXQ'" type="button">
-            FREE MONEY</button>
-        <button id="button" type="button">EMAIL</button>
-    </div>
+        <div id="cube-container">
+            <div class="cube">
+                <div class="front">
+                    <h2 class="wave">ABOUT ME</h2>
+                    <h4>Software Developer. My forte is in frontend development, 
+                        but I also have experience with full-stack. I hate parmesan cheese.</h4>
+                </div>
+                <div class="back">
+                    <h2 class="wave">PROJECTS</h2>
+                    <a href="#lower-section">⬇️</a>
+                </div>
+                <div class="right">
+                    <h2 class="wave">EDUCATION</h2>
+                    <h3>CSU Northridge</h3>
+                    <h4>Graduated in 2023 with a B.S in Computer Science</h4>
+                </div>
+                <div class="left">
+                    <h2 class="wave">SKILLS</h2>
+                    <div>
+                        <img src="images/html.svg" class="img-skill"></img>
+                        <img src="images/CSS.svg" class="img-skill"></img>
+                        <img src="images/JavaScript.svg" class="img-skill"></img>
+                        <img src="images/React.svg" class="img-skill"></img>
+                        <img src="images/docker.svg" class="img-skill"></img>
+                        <img src="images/githubpages.svg" class="img-skill"></img>
+                        <img src="images/vscode.svg" class="img-skill"></img>
+                    </div>
+                </div>
+                <div class="top">
+                    <div class="slide-left">
+                        <h3>This is an example paragraph with example sentences. This is an example paragraph with example sentences. This is an example paragraph with example sentences.</h3>
+                    </div>
+                </div>
+                <div class="bottom">
+                        <h2 class="wave">SPIN THE CUBE!</h2>
+                        <button onclick="spinCube()">Spin</button>
+                </div>
+            </div>
+        </div>  
+    </div> 
     <div id="lower-section">
         <h5>PROJECTS</h5>
     </div>
     <footer>
         Image by <a href=" https://www.vectorportal.com">Vectorportal.com</a>, <a class="external text"
-            href="https://creativecommons.org/licenses/by/4.0/">CC BY</a>
+        href="https://creativecommons.org/licenses/by/4.0/">CC BY</a>
     </footer>
+    <script src="main.js"></script>
 </body>
 </html>

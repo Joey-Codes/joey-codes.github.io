@@ -1,26 +1,10 @@
 const cube = document.querySelector('.cube');
-
 let rotateX = 0;
 let rotateY = 0;
 
+
 function rotateCube() {
     cube.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-}
-
-function spinCube() {
-    const randomSide = Math.floor(Math.random() * 6);
-    const cube = document.querySelector('.cube');
-
-    const rotations = [
-        'rotateX(0deg) rotateY(0deg) rotateZ(0deg)', // Front
-        'rotateX(180deg) rotateY(0deg) rotateZ(0deg)', // Back
-        'rotateX(0deg) rotateY(90deg) rotateZ(0deg)', // Right
-        'rotateX(0deg) rotateY(-90deg) rotateZ(0deg)', // Left
-        'rotateX(-90deg) rotateY(0deg) rotateZ(0deg)', // Top
-        'rotateX(90deg) rotateY(0deg) rotateZ(0deg)' // Bottom
-    ];
-
-    cube.style.transform = rotations[randomSide];
 }
 
 document.addEventListener('keydown', function(event) {
@@ -38,6 +22,54 @@ document.addEventListener('keydown', function(event) {
             rotateY += 90;
             break;
     }
-
     rotateCube();
 });
+
+let touchStartX = 0;
+let touchStartY = 0;
+
+document.addEventListener('touchstart', handleTouchStart, false);
+document.addEventListener('touchmove', handleTouchMove, false);
+
+function handleTouchStart(event) {
+    touchStartX = event.touches[0].clientX;
+    touchStartY = event.touches[0].clientY;
+}
+
+function handleTouchMove(event) {
+    if (!touchStartX || !touchStartY) {
+        return;
+    }
+    const touchEndX = event.touches[0].clientX;
+    const touchEndY = event.touches[0].clientY;
+
+    const deltaX = touchEndX - touchStartX;
+    const deltaY = touchEndY - touchStartY;
+
+    const sensitivity = 5;
+
+    if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > sensitivity) {
+        //X direction
+        if (deltaX > 0) {
+            //right
+            rotateY += 90;
+        } else {
+            //left
+            rotateY -= 90;
+        }
+    } else if (Math.abs(deltaY) > sensitivity) {
+        //Y direction
+        if (deltaY > 0) {
+            //down
+            rotateX += 90;
+        } else {
+            //up
+            rotateX -= 90;
+        }
+    }
+
+    rotateCube();
+
+    touchStartX = 0;
+    touchStartY = 0;
+};

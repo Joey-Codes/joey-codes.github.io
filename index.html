@@ -16,7 +16,7 @@
     <span id="splash-overlay" class="splash"></span>
     <span id="welcome" class="z-depth-4"></span>
     <header id="top">
-        <ul class="nav" align="center">
+        <ul class="nav">
             <li><a href="#top" class="navlink">TOP</a></li>
             <li><a href="#middle-section" class="navlink">ABOUT</a></li>
             <li><a href="#lower-section" class="navlink">PROJECTS</a></li>
@@ -26,19 +26,24 @@
     </header>
     <div id="top-section">
         <h1>HELLO, I'M JOEY</h1>
-        <p><b>Use the WASD keys to move</b></p>
+        <br />
+        <p class="desktop-only"><b>Use the WASD keys to move the cube</b></p>
+        <p class="mobile-only"><b>Swipe to move the cube</b></p>
     </div>    
     <div id="middle-section">
         <div id="cube-container">
             <div class="cube">
                 <div class="front">
                     <h2 class="wave">ABOUT ME</h2>
-                    <h4>Software Developer. My forte is in frontend development, 
+                    <h4>I'm a recent college grad aiming to work as a Software Developer. My forte is in frontend development, 
                         but I also have experience with full-stack. I hate parmesan cheese.</h4>
                 </div>
                 <div class="back">
-                    <h2 class="wave">PROJECTS</h2>
-                    <a href="#lower-section">⬇️</a>
+                    <h2 class="wave">EXPERIENCE</h2>
+                    <h3>Freelance Web Designer </h3>
+                    <h4>Redesigned website for the business, <a href="https://www.silvaboxing-mma.com/" target="_blank" style="color: #23d56d">
+                        Silva Boxing MMA</a>, to improve the site's overall
+                        look, organization, and functionality on Wix</h4>
                 </div>
                 <div class="right">
                     <h2 class="wave">EDUCATION</h2>
@@ -47,35 +52,71 @@
                 </div>
                 <div class="left">
                     <h2 class="wave">SKILLS</h2>
-                    <div>
-                        <img src="images/html.svg" class="img-skill"></img>
-                        <img src="images/CSS.svg" class="img-skill"></img>
-                        <img src="images/JavaScript.svg" class="img-skill"></img>
-                        <img src="images/React.svg" class="img-skill"></img>
-                        <img src="images/docker.svg" class="img-skill"></img>
-                        <img src="images/githubpages.svg" class="img-skill"></img>
-                        <img src="images/vscode.svg" class="img-skill"></img>
+                    <div class="skill-list">
+                        <h4 class="skill" style="background-color: #E34F26">HTML</h4>
+                        <h4 class="skill" style="background-color: #1572B6">CSS</h4>
+                        <h4 class="skill" style="background-color: #F7DF1E">JavaScript</h4>
+                    </div>
+                    <div class="skill-list">
+                        <h4 class="skill" style="background-color: #47A248">MongoDB</h4>
+                        <h4 class="skill" style="background-color: #61DAFB">React.js</h4>
+                        <h4 class="skill" style="background-color: #2b2b2b">Express.js</h4>
+                    </div>
+                    <div class="skill-list">
+                        <h4 class="skill" style="background-color: #68A063">Node.js</h4>
+                        <h4 class="skill" style="background-color: #2496ED">Docker</h4>
+                        <h4 class="skill" style="background-color: #007396">Java</h4>
+                    </div>
+                    <div class="skill-list">
+                        <h4 class="skill" style="background-color: #4285F4">Google Cloud Platform</h4>
+                        <h4 class="skill" style="background-color: #0ACF83">Figma</h4>
+                    </div>
+                    <div class="skill-list">
+                        <h4 class="skill" style="background-color: #0052CC">Jira</h4>
+                        <h4 class="skill" style="background-color: #da9c17">Wix</h4>
+                        <h4 class="skill" style="background-color: #222222">Squarespace</h4>
                     </div>
                 </div>
                 <div class="top">
-                    <div class="slide-left">
-                        <h3>This is an example paragraph with example sentences. This is an example paragraph with example sentences. This is an example paragraph with example sentences.</h3>
-                    </div>
+                        <h2 class="wave">CONTACT ME</h2>
+                        <div>
+                            <div class="contact">Email: jpw378@gmail.com</div>
+                            <div class="contact">LinkedIn https://www.linkedin.com/in/joseph-wang-642258274/</div>
+                        </div>
                 </div>
                 <div class="bottom">
-                        <h2 class="wave">SPIN THE CUBE!</h2>
-                        <button onclick="spinCube()">Spin</button>
+                        <h2 class="wave">TBA</h2>
                 </div>
             </div>
         </div>  
     </div> 
     <div id="lower-section">
         <h5>PROJECTS</h5>
+        <div class="project">
+            <img src="images/spookydooky.png" class="project-img"></img>
+            <div>
+                <a href="https://spookydooky.net" target="_blank">
+                    <h2 style="color: red">Spooky Dooky</h2>
+                </a>
+                <h3>Full-stack web application allowing users to document their experiences of
+                    supernatural phenomena at any location worldwide . Features world map overlaid with
+                    location data and various filters for sorting places and reviews.</h3>
+                <h3 style="font-style: italic;">Tools Used: MongoDB, Express.js, React.js, Node.js, Firebase, Docker, Google Cloud</h3>
+            </div>
+        </div>
+        <div class="project">
+            <img src="images/simplyalgorithms.png" class="project-img"></img>
+            <div>
+                <a href="https://simplyalgorithms.com" target="_blank">
+                    <h2 style="color: #9df7ff">Simply Algorithms</h2>
+                </a>
+                <h3> Full-stack web application providing dynamic educational resources about algorithms,
+                    including a wiki, user forums, quizzes, and user statistics to enhance comp sci
+                    knowledge for novices</h3>
+                <h3 style="font-style: italic">Tools Used: React.js, Figma, HTML, CSS, Github, Jira</h3>
+            </div>
+        </div>
     </div>
-    <footer>
-        Image by <a href=" https://www.vectorportal.com">Vectorportal.com</a>, <a class="external text"
-        href="https://creativecommons.org/licenses/by/4.0/">CC BY</a>
-    </footer>
     <script src="main.js"></script>
 </body>
 </html>

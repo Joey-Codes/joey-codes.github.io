@@ -48,6 +48,10 @@ function handleTouchMove(event) {
 
     const sensitivity = 5;
 
+    if (!cube.contains(event.target.closest('.cube'))) {
+        return;
+    }
+
     if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > sensitivity) {
         //X direction
         if (deltaX > 0) {
